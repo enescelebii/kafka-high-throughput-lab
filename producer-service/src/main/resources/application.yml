@@ -19,3 +19,11 @@ logging:
     kafka: WARN
     org.apache.kafka.clients.consumer.internals: ERROR
     org.apache.kafka.clients.producer.internals: ERROR
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus,health,info
+  metrics:
+    tags:
+      application: producer-service
